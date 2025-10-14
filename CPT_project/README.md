@@ -12,7 +12,7 @@
 - [Cisco Packet Tracer](https://www.netacad.com/cisco-packet-tracer)
 
 ## Топология сети
-[Топология сети](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project/images/Network_topology.png)
+![Топология сети](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project/images/Network_topology.png)
 
 ## Распределение ip-адресов
 | Device | Interface | IP-address/mask | Default gateway |
@@ -30,9 +30,9 @@
 | PC3 | F0 | 192.168.2.3/24 | 192.168.1.1 |
 | PC4 | F0 | 192.168.2.4/24 | 192.168.1.1 |
 
-По RFC 6598 адреса для соединений между маршрутизаторами используется диапазон ip-адресов: 100.64.0.0 - 100.127.255.255 - специальные "Shared Address Space" адреса.
-192.168.x.x - стандарт для домашних/офисных сетей
-8.8.8.8 - адрес dns.google.com - как пример для выхода в сеть
+- По RFC 6598 адреса для соединений между маршрутизаторами используется диапазон ip-адресов: 100.64.0.0 - 100.127.255.255 - специальные "Shared Address Space" адреса.
+- 192.168.x.x - стандарт для домашних/офисных сетей
+- 8.8.8.8 - адрес dns.google.com - как пример для выхода в сеть с помощью Loopback
 
 ## Настройка маршрутизаторов и PC
 Настройка ISP_Router:
@@ -127,10 +127,11 @@ ip nat inside source list 1 int g0/1 overload
 Все PC настраиваются через IP Configuration
 
 ##Тестирование
-Для проверки работы можно использовать утилиту ping
 
-ping с PC0 на PC3
-[Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project/images/ping.png)
+- Для проверки работы можно использовать утилиту ping
+
+- ping с PC0 на PC3
+![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project/images/ping.png)
 
 
 
