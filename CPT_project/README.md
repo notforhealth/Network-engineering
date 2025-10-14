@@ -3,6 +3,7 @@
 
 ## Содержание
 - [Технологии](#технологии)
+- [Используемые аппаратные средства](#используемые-аппаратные-средства)
 - [Топология сети](#топология-сети)
 - [Распределение ip-адресов](#распределение-ip-адресов)
 - [Настройка маршрутизаторов и PC](#настройка-маршрутизаторов-и-pc)
@@ -10,6 +11,13 @@
 
 ## Технологии
 - [Cisco Packet Tracer](https://www.netacad.com/cisco-packet-tracer)
+
+## Используемые аппаратные средства
+- [Маршрутизатор Cisco CISCO2901-V/K9](https://cisco-russia.ru/cisco-cisco2901-v-k9)
+- [Коммутатор Cisco Catalyst WS-C2960-24TT-L](https://cisco-russia.ru/cisco-ws-c2960-24tt-l)
+- Персональные компьютеры
+- Copper Straight-Through - прямой медный кабель витой пары для соединения устройств
+
 
 ## Топология сети
 ![Топология сети](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project/images/Network_topology.png)
@@ -35,7 +43,7 @@
 - 8.8.8.8 - адрес dns.google.com - как пример для выхода в сеть с помощью Loopback
 
 ## Настройка маршрутизаторов и PC
-Настройка ISP_Router:
+### Настройка ISP_Router:
 ``````
 enable
 configure terminal
@@ -61,7 +69,7 @@ ip route 192.168.2.0 255.255.255.0 100.64.0.6
 
 ``````
 
-Настройка Router0:
+### Настройка Router0:
 ``````
 enable
 configure terminal
@@ -93,7 +101,7 @@ ip nat inside source list 1 int g0/1 overload
 
 ``````
 
-Настройка Router1:
+### Настройка Router1:
 ``````
 enable
 configure terminal
@@ -124,7 +132,7 @@ ip nat inside source list 1 int g0/1 overload
 
 ``````
 
-Все PC настраиваются через IP Configuration
+- Все PC настраиваются через IP Configuration
 
 ## Тестирование
 
