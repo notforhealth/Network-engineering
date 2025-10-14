@@ -126,7 +126,7 @@ ip nat inside source list 1 int g0/1 overload
 
 Все PC настраиваются через IP Configuration
 
-##Тестирование
+## Тестирование
 
 - Для проверки работы можно использовать утилиту ping
 
