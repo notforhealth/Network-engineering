@@ -126,6 +126,15 @@ ip nat inside source list 1 int g0/1 overload
 
 Все PC настраиваются через IP Configuration
 
+##Тестирование
+Для проверки работы можно использовать утилиту ping
+
+ping с PC0 на PC3
+[Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project/images/ping.png)
+
+
+
+
 
 
 
