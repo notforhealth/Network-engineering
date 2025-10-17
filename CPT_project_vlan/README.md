@@ -173,7 +173,7 @@ R0(config)#ip nat inside source list FOR-NAT interface g0/1 overload
 ![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vlan/images/ping_first.png)
 - ping с PC1, PC16 на Server1 и обратно(проверка работы безопасности подключения к интернету)
 ![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vlan/images/ping_second.png)
-- В данном случае увидим, что с Server1 не удается подключиться к компьютерам локальной сети, а значит все работает правильно.
+- В данном случае увидим, что с Server1 не удается подключиться к компьютерам локальной сети, но с компьютеров к Server1 ping проходит (то есть доступ в интернет есть), а значит все работает правильно.
 
 
 
