@@ -1,5 +1,5 @@
 # Локальная сеть с vlan
-В данном проекте реализована локальная сеть офиса компании с 3 рабочими кабинетами и основным помещением работников. Для выхода в интернет используется имитация маршрутизатора провайдера и выход в интернет в виде сервера.
+В данном проекте реализована локальная сеть офиса компании с 3 рабочими кабинетами и основным помещением работников. Имитация выхода в интернет реализована с помощью маршрутизатора провайдера и сервера.
 
 ## Содержание
 - [Технологии](#технологии)
@@ -23,7 +23,7 @@
 
 
 ## Топология сети
-![Топология сети](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project/images/Network_topology.png)
+![Топология сети](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vlan/images/Network_topology.png)
 
 ## Распределение ip-адресов
 | Device | Interface | IP-address/mask | Default gateway |
@@ -81,7 +81,7 @@ SWmain(config-if-range)#switchport mode trunk
 SWmain(config-if-range)#switchport trunk allowed vlan 2,3,4,5
 ``````
 
-## Настройка маршрутизаторов и PC
+## Настройка маршрутизаторов, ПК и серверов
 
 ### Настройка Router0:
 ``````
@@ -170,9 +170,9 @@ R0(config)#ip nat inside source list FOR-NAT interface g0/1 overload
 - Для проверки работы можно использовать утилиту ping:
 
 - ping с PC2 на PC13 и обратно(проверка работы vlan между друг другом)
-![Проверка с помощью ping]()
+![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vlan/images/ping_first.png)
 - ping с PC1, PC16 на Server1 и обратно(проверка работы безопасности подключения к интернету)
-![Проверка с помощью ping]()
+![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vlan/images/ping_second.png)
 - В данном случае увидим, что с Server1 не удается подключиться к компьютерам локальной сети, а значит все работает правильно.
 
 
