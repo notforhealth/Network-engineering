@@ -39,7 +39,7 @@
 
 - 192.168.x.x - стандарт для домашних/офисных сетей
 
-## Настройка EtherChannel (LACP)
+## Настройка EtherChannel
 ### Настройка Mult.Switch0:
 ``````
 enable
