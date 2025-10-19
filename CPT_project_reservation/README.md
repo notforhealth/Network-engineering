@@ -180,11 +180,11 @@ ip routing
 ![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_reservation/images/ping_PC.png)
 ### Ping с PC0 на PC1 с выключением интерейса на Router0
 - Выполним ping -t 192.168.10.11 на PC0. Во время работы ping отключим интерфейс на Router0.
-![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_reservation/images/ping_PC.png)
+![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_reservation/images/ping_without_router0.png)
 - В данном случае увидим, что в момент выключения и включения повышается время передачи пакета, а Router1 переводится в режим Active и Standby соответственно.
 ### Тест EtherChannel
 - Выполним ping -t 192.168.10.11 на PC0. Во время работы ping удалим 2 кабеля между Mult.Switch 0 и 1.
-![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_reservation/images/ping_PC.png)
+![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_reservation/images/ping_2.png)
 - В данном случае увидим, что из-за отключения кабелей несколько пакетов передалось с задержкой, но потом соединение стабилизировалось.
 ### Тест STP
 - Выключим порт на Mult.Switch0, ведущий к Switch0. Из-за этого STP пересчитает дерево, и Switch0 теперь будет использовать путь через Mult.Switch1.
