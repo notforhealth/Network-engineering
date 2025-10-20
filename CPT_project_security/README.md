@@ -11,7 +11,7 @@
 - [Настройка Port Security](#настройка-port-security)
 - [Настройка DHCP Snooping](#настройка-dhcp-snooping)
 - [Настройка ACL](#настройка-acl)
-- [Настройка 802.1X)(#настройка-802.1x)
+- [Настройка 802.1X](#настройка-802.1x)
 - [Проверка работы](#проверка-работы)
 
 ## Технологии
@@ -28,7 +28,7 @@
 
 
 ## Топология сети
-![Топология сети]()
+![Топология сети](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_security/images/Network_topology.png)
 - В данном проекте реализуется локальная сеть офиса с сетью для сотрудников и гостевой сетью. Для реализации гостевой сети применяется точка доступа как переход на беспроводную сеть. Точка доступа подключается к интерфейсу G0/1, чтобы использоваться только как переход, без образования отдельной локальной сети.
 
 ## Распределение ip-адресов
@@ -187,13 +187,13 @@ w
 
 ## Проверка работы
 ### Port Security
-![Port Security]()
+![Port Security](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_security/images/port-security.png)
 
 ### DHCP Snooping
-![DHCP Snooping]()
+![DHCP Snooping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_security/images/dhcp_snooping.png)
 ### ACL
-![ACL1]()
-![ACL2]()
+![ACL1](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_security/images/acl.png)
+![ACL2](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_security/images/ping_acl.png)
 
 
 
