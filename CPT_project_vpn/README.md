@@ -52,6 +52,7 @@ R0(config)#int g0/1
 R0(config-if)#ip address 10.2.0.2 255.255.255.252
 R0(config-if)##no sh
 R0(config-if)#ex
+``````
 
 ### Настройка Router1:
 ``````
