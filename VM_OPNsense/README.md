@@ -53,9 +53,9 @@
 - ![login](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/OPNsense/login.png)
 ## Настройка Debian
 - В ВМ Debian необходимо поменять IP-адрес на статический, для того чтобы попасть на веб версию OPNsense:
-![ipv4](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/debian/debian_changing_IP.png)
+- ![ipv4](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/debian/debian_changing_IP.png)
 - Заходим через firefox в OPNsense:
-- ![web site](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/debian/debian_connection.png)
+![web site](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/debian/debian_connection.png)
 ![web opnsense](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/debian/login_OPNsense_web.png)
 
 
