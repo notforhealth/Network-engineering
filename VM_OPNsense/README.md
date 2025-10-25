@@ -32,7 +32,8 @@
 ### Debian
 - Для установки Debian скачиваем образ Debian 13.1.0 с сайта https://www.debian.org/distrib/index.ru.html. Импортируем также как и OPNsense, но указываем логин, пароль и имя хоста.
 - В итоге получаем две виртуальные машины в VirtualBox:
-![Виртуальные машины](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/VM.png)
+
+- ![Виртуальные машины](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/VM.png)
 
 ## Настройка сетевых адаптеров
 ### Для OPNsense
@@ -41,18 +42,20 @@
 ### Для Debian
 - Необходимо переключить с NAT на внутреннюю сеть:
 ![Внутренняя сеть](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/adapter_debian.png)
+
+
 ## Настройка OPNsense
 ### Установка
 - Запускаем ВМ OPNsense и в момент загрузки система предложит настроить интерфейсы, соглашаемся и настраиваем em0 как WAN, а em1 как LAN:
 ![Настройка интерфейсов](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/OPNsense/interfaces.png)
 - Далее нужно продолжить настройку. Для этого заходим на аккаунт installer с паролем opnsense, после чего появится окно настроек OPNsense. Здесь необходимо выбрать UFS (файловая система, используемая в OPNsense) и подтвердить запись изменений на диск. В конце меняем пароль от пользователя root и выключаем ВМ. Отключаем iso файл из носителей OPNsense, чтобы при запуске ВМ не начала настраиваться заново.
 - Запускаем ВМ и ждем загрузки, заходим под пользователем root.
-![login](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/OPNsense/login.png)
+- ![login](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/OPNsense/login.png)
 ## Настройка Debian
 - В ВМ Debian необходимо поменять IP-адрес на статический, для того чтобы попасть на веб версию OPNsense:
 ![ipv4](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/debian/debian_changing_IP.png)
 - Заходим через firefox в OPNsense:
-![web site](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/debian/debian_connection.png)
+- ![web site](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/debian/debian_connection.png)
 ![web opnsense](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/debian/login_OPNsense_web.png)
 
 
