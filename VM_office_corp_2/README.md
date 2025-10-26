@@ -27,7 +27,7 @@
 
 
 ## Логическая схема
-![Логическая схема](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/logical_scheme.png)
+![Логическая схема](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/VM_logical.png)
 
 
 ## Установка всех необходимых средств
@@ -39,32 +39,32 @@
 - Для установки Ubuntu скачиваем образ Ubuntu 24.04.3 с сайтов https://ubuntu.com/download/server и https://ubuntu.com/download/desktop. Здесь необходимо создать три сервера и один клиент.
 - В итоге получаем 5 виртуальных машин в VirtualBox:
 
-- ![Виртуальные машины]()
+- ![Виртуальные машины](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/VM.png)
 
 ## Настройка сетевых адаптеров
 ### Для pfSense
 - Необходимо добавить три сетевых адаптера с внутренней сетью:
-![Внутренняя сеть]()
-![Внутренняя сеть]()
-![Внутренняя сеть]()
+![Внутренняя сеть](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/firewall_adapter1.png)
+![Внутренняя сеть](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/firewall_adapter_2.png)
+![Внутренняя сеть](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/firewall_adapter_3.png)
 ### Для серверов и клиента
 - Необходимо переключить с NAT на внутреннюю сеть. Для каждого из виртуальных машин представленны изображения:
-![domaincontroller]()
-![web]()
-![monitor]()
-![client]()
+![domaincontroller](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/domain_adapter.png)
+![web](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/web_adapter.png)
+![monitor](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/monitor_adapter.png)
+![client](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/client_adapter.png)
 
 ## Установка ОС
 ### Установка pfSense
 - Установка pfSense практически ничем не отличается от установки OPNsense описаной в предыдущем проекте.
 ### Установка Ubuntu Server
 - Язык, раскладку оставляем по умолчанию. Тип установки Ubuntu Server. Сеть оставляем DHCP, прокси пропускаем. Устанавливаем на доступный диск. В профиле вводим следующие данные:
-![profile]()
+![profile](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/server_download.png)
 - Также устанавливаем SSH, все остальное оставляем по умолчанию.
 - Такую же процедуру повторить на двух оставшихся серверах.
 ### Установка Ubuntu Desktop
 - Все оставляем по умолчанию. В этом окне заполняем профиль:
-![profile]()
+![profile](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/client_download.png)
 
 
 ## Настройка pfSense
@@ -203,7 +203,7 @@ sudo systemctl enable bind9
 sudo systemctl status bind9
 ``````
 - Если при проверке статуса все работает и выглядит как на изображении, значит все сделано правильно:
-![bind9status]()
+![bind9status](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/bind9.png)
 
 ## Настройка DHCP сервера
 
@@ -272,7 +272,7 @@ sudo systemctl enable isc-dhcp-server
 sudo systemctl status isc-dhcp-server
 ``````
 - По итогу должны получить:
-![dhcp]()
+![dhcp](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/dhcp_server.png)
 
 ## Настройка МЭ
 - Для начала необходимо с клиента зайти в веб-интерфейс pfSense. Для этого переходим по ссылке https://192.168.10.1. Логин admin, пароль pfsense, но при первом заходе его необходимо поменять.
@@ -316,7 +316,7 @@ sudo systemctl enable chrony
 sudo systemctl status chrony
 ``````
 - Должна получиться такая картина:
-![chrony]()
+![chrony](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/chrony.png)
 
 ### Настройка на серверах
 - На webserver прописывает в терминал:
@@ -384,7 +384,7 @@ sudo systemctl reload apache2
 ``````
 
 - Для проверки заходим на http://192.168.30.10 через клиент. Откроется тестовая страница: 
-![apachetest]()
+![apachetest](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/web_server_site.png)
 
 
 ## Система мониторинга
@@ -461,7 +461,7 @@ sudo systemctl start prometheus
 sudo systemctl enable prometheus
 sudo systemctl status prometheus
 ``````
-![prometheus]()
+![prometheus](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/prometheus.png)
 
 ### Установка Node Exporter
 - Node Exporter - агент системы мониторинга prometheus, который и собирает метрики с серверов Linux и предоставляет их в формате, понятном для prometheus.
@@ -498,7 +498,7 @@ sudo systemctl enable node_exporter
 sudo systemctl status node_exporter
 ``````
 - По итогу должны получить:
-![node_exporter]()
+![node_exporter](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/node_exporter.png)
 
 ### Установка Grafana на monitoringserver
 - Grafana - система визуализации метрик в графическом виде
@@ -510,15 +510,15 @@ sudo systemctl enable grafana-server
 sudo systemctl status grafana-server
 ``````
 - Итог:
-![grafana]()
+![grafana](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/grafana.png)
 
 ### Настройка Grafana на клиенте
 - Открываем на клиенте в браузере http://192.168.20.100:3000. Логин admin, пароль admin, который при первом входе попросят поменять.
 - Добавляем источник данных - prometheus - url: http://localhost:9090 - save & test.
-![grafana_add_prometheus]()
+![grafana_add_prometheus](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/grafana_options.png)
 - Импортируем дашборд через + - import...
 - Получаем такую картину:
-![grafana_web_client]
+![grafana_web_client](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/grafana_dashboard.png)
 
 ## Система резервного копирования
 ### Настройка автоматического бэкапа конфигов на domaincontroller
@@ -563,21 +563,21 @@ sudo crontab -e
 ## Тестирование
 ### Проверка DNS
 - С клиента:
-![DNS_check]()
+![DNS_check](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/dns_check.png)
 
 ### Проверка DHCP
 - Перезагрузим клиента, после загрузки он должен получить IP-адрес
-![DHCP_check]()
+![DHCP_check](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/dhcp_check.png)
 
 ### Проверка веб сервера
 - Из браузера клиента: http://192.168.30.10
-![web_check]()
+![web_check](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/web_server_site.png)
 
 ### Проверка мониторинга
 - Из браузера клиента: http://192.168.20.100:3000 для Grafana, http://192.168.20.100:9090 для Prometheus.
 
-![grafana_check]()
-![prometheus_check]()
+![grafana_check](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/grafana_check.png)
+![prometheus_check](https://github.com/notforhealth/Network-engineering/blob/main/VM_office_corp_2/images/prometheus_check.png)
 
 ### Проверка фаервола
 - С клиента зайти на http://192.168.30.10 - должно работать
