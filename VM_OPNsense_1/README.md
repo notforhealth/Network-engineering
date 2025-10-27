@@ -47,7 +47,7 @@
 ## Настройка OPNsense
 ### Установка
 - Запускаем ВМ OPNsense и в момент загрузки система предложит настроить интерфейсы, соглашаемся и настраиваем em0 как WAN, а em1 как LAN:
-![Настройка интерфейсов](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/OPNsense/interfaces.png)
+![Настройка интерфейсов](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense_1/images/OPNsense/interfaces.png)
 - Далее нужно продолжить настройку. Для этого заходим на аккаунт installer с паролем opnsense, после чего появится окно настроек OPNsense. Здесь необходимо выбрать UFS (файловая система, используемая в OPNsense) и подтвердить запись изменений на диск. В конце меняем пароль от пользователя root и выключаем ВМ. Отключаем iso файл из носителей OPNsense, чтобы при запуске ВМ не начала настраиваться заново.
 - Запускаем ВМ и ждем загрузки, заходим под пользователем root.
 - ![login](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense_1/images/OPNsense/login.png)
@@ -61,9 +61,9 @@
 
 ## Настройка DHCP
 - В ВМ OPNsense в меню выбираем пункт 2 для включения DHCP. Выбираем LAN и вписываем тот же IP адрес с той же маской, что были и раньше. На пункте "DHCP server on LAN" выбираем да и записываем пул IP-адресов для этой подсети:
-![dhcp](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/OPNsense_1/OPNsense_changin_LAN_IP.png)
-![dhcp](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/OPNsense_1/OPNsense_changin_LAN_IP_2.png)
-![dhcp](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense/images/OPNsense_1/OPNsense_changin_LAN_IP_3.png)
+![dhcp](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense_1/images/OPNsense/OPNsense_changin_LAN_IP.png)
+![dhcp](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense_1/images/OPNsense/OPNsense_changin_LAN_IP_2.png)
+![dhcp](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense_1/images/OPNsense/OPNsense_changin_LAN_IP_3.png)
 - После этого меняем на клиенте выдачу IP-адресов с помощью DHCP:
 ![dhcp](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense_1/images/debian/debian_changing_IP_DHCP.png)
 ![dhcp](https://github.com/notforhealth/Network-engineering/blob/main/VM_OPNsense_1/images/debian/debian_netrwork.png)
