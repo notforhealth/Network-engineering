@@ -24,7 +24,7 @@
 
 
 ## Топология сети
-![Топология сети](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_reservation/images/Network_topology.png)
+![Топология сети](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_reservation_3/images/Network_topology.png)
 - В подключении между Multilayer Switch 0 и 1 используется EtherChannel (технология агрегации каналов, позволяющая объединить нескольких портов в единый логический интерфейс). Для этого используется протокол LACP(Link Aggregation Control Protocol). Он автоматизирует процесс объединение портов, позволяя сетевым устройствам договариваться о формировании агрегированного канала. При отказе одного из каналов трафик автоматически перенаправляется через оставшиеся, обеспечивая бесперебойную работу сети.
 
 ## Распределение ip-адресов
@@ -177,14 +177,14 @@ ip routing
 ## Тестирование
 
 ### Ping с PC0 на PC1
-![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_reservation/images/ping_PC.png)
+![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_reservation_3/images/ping_PC.png)
 ### Ping с PC0 на PC1 с выключением интерейса на Router0
 - Выполним ping -t 192.168.10.11 на PC0. Во время работы ping отключим интерфейс на Router0.
-![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_reservation/images/ping_without_router0.png)
+![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_reservation_3/images/ping_without_router0.png)
 - В данном случае увидим, что в момент выключения и включения повышается время передачи пакета, а Router1 переводится в режим Active и Standby соответственно.
 ### Тест EtherChannel
 - Выполним ping -t 192.168.10.11 на PC0. Во время работы ping удалим 2 кабеля между Mult.Switch 0 и 1.
-![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_reservation/images/ping_2.png)
+![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_reservation_3/images/ping_2.png)
 - В данном случае увидим, что из-за отключения кабелей несколько пакетов передалось с задержкой, но потом соединение стабилизировалось.
 ### Тест STP
 - Выключим порт на Mult.Switch0, ведущий к Switch0. Из-за этого STP пересчитает дерево, и Switch0 теперь будет использовать путь через Mult.Switch1.

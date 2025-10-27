@@ -22,7 +22,7 @@ IPSec - набор протоколов, обеспечивающих безоп
 
 
 ## Топология сети
-![Топология сети](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vpn/images/network_topology.png)
+![Топология сети](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vpn_5/images/network_topology.png)
 
 ## Распределение ip-адресов
 | Device | Interface | IP-address/mask | Default gateway |
@@ -163,15 +163,15 @@ R2(config-if)#crypto map CrMap
 ## Тестирование
 
 - Для проверки работы напишем в CLI Router2 команду "show crypto ipsec sa":
-![Router2 show_first](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vpn/images/show_ipsec_first.png)
+![Router2 show_first](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vpn_5/images/show_ipsec_first.png)
 
 - Увидим количество инкапсулированных пакетов (pkts encaps) равным 14.
 
 - Отправим эхо-запрос с PC0 на PC1:
-![Эхо-запрос](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vpn/images/ping.png)
+![Эхо-запрос](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vpn_5/images/ping.png)
 
 - Теперь заново посмотрим в CLI Router2 количество инкапсулированных пакетов:
-![Router2 show_second](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vpn/images/show_ipsec_second.png)
+![Router2 show_second](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vpn_5/images/show_ipsec_second.png)
 
 - Увидим, что количество инкапсулированных пакетов увеличилось. Это означает, что IPSec туннель работает исправно.
 

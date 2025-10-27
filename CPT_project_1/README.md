@@ -20,7 +20,7 @@
 
 
 ## Топология сети
-![Топология сети](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project/images/Network_topology.png)
+![Топология сети](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_1/images/Network_topology.png)
 
 ## Распределение ip-адресов
 | Device | Interface | IP-address/mask | Default gateway |
@@ -139,7 +139,7 @@ ip nat inside source list 1 int g0/1 overload
 - Для проверки работы можно использовать утилиту ping
 
 - ping с PC0 на PC3
-![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project/images/ping.png)
+![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_1/images/ping.png)
 
 
 

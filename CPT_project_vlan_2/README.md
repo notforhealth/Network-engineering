@@ -23,7 +23,7 @@
 
 
 ## Топология сети
-![Топология сети](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vlan/images/Network_topology.png)
+![Топология сети](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vlan_2/images/Network_topology.png)
 
 ## Распределение ip-адресов
 | Device | Interface | IP-address/mask | Default gateway |
@@ -170,9 +170,9 @@ R0(config)#ip nat inside source list FOR-NAT interface g0/1 overload
 - Для проверки работы можно использовать утилиту ping:
 
 - ping с PC2 на PC13 и обратно(проверка работы vlan между друг другом)
-![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vlan/images/ping_first.png)
+![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vlan_2/images/ping_first.png)
 - ping с PC1, PC16 на Server1 и обратно(проверка работы безопасности подключения к интернету)
-![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vlan/images/ping_second.png)
+![Проверка с помощью ping](https://github.com/notforhealth/Network-engineering/blob/main/CPT_project_vlan_2/images/ping_second.png)
 - В данном случае увидим, что с Server1 не удается подключиться к компьютерам локальной сети, но с компьютеров к Server1 ping проходит (то есть доступ в интернет есть), а значит все работает правильно.
 
 
